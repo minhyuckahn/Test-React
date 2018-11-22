@@ -20,16 +20,6 @@
 				font-family:sans-serif;
 				color:#00F0A8;
 			}
-			.letter{
-				padding:10px;
-				margin:10px;
-				background-color: #ffde00;
-				color:#030303;
-				display: inline-block;
-				font-family:monospace;
-				font-size:32px;
-				text-align:center;
-			}
 		</style>
 	</head>
 	<body>
@@ -37,8 +27,19 @@
 		<script type="text/babel">
 			var HelloWorld = React.createClass({
 				render: function() {
+					var letterStyle={
+						padding:10,
+						margin:10,
+						backgroundColor: this.props.bc,
+						color:"#030303",
+						display: "inline-block",
+						fontFamily: "monospace",
+						fontSize: 32,
+						textAlign: "center"
+					};
+
 					return (
-						<div className="letter">
+						<div style={letterStyle}>
 						"{this.props.children}"
 						</div>
 					);
@@ -47,7 +48,10 @@
 
 			ReactDOM.render(
 <div>
-				<HelloWorld>A</HelloWorld><HelloWorld>B</HelloWorld><HelloWorld>C</HelloWorld><HelloWorld>D</HelloWorld>
+<HelloWorld bc="#58B3FF">A</HelloWorld>
+<HelloWorld bc="#FF605F">B</HelloWorld>
+<HelloWorld bc="#FFD52E">C</HelloWorld>
+<HelloWorld bc="#49DD8E">D</HelloWorld>
 </div>,
 				document.querySelector("#container")
 			);
