@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<tiele>React Comp</title>
+		<script src="./js-lib/react.js"></script>
+		<script src="./js-lib/react-dom.js"></script>
+		<script src="./js-lib/browser.min.js"></script>
+		<style>
+			#container{
+				padding: 50pt;
+				background-color: #EEE;
+			}
+			#container h1{
+				font-size:50px;
+				font-family:sans-serif;
+				color:#0080A8;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container"></div>
+		<script type="text/babel">
+			var discion = document.querySelector("#container")
+			ReactDOM.render(
+			<h1>Creapas !discion  !!</h1>, discion
+			);
+		</script>
+	</body>
+</html>

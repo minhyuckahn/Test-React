@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<tiele>React Comp</title>
+		<script src="./js-lib/react.js"></script>
+		<script src="./js-lib/react-dom.js"></script>
+		<script src="./js-lib/browser.min.js"></script>
+		<style>
+			#container{
+				padding: 50pt;
+				background-color: #EEE;
+			}
+			#container h1{
+				font-size:50px;
+				font-family:sans-serif;
+				color:#0080A8;
+			}
+			#container h3{
+				font-size:20px;
+				font-family:sans-serif;
+				color:#00F0A8;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container"></div>
+		<script type="text/babel">
+			var HelloWorld = React.createClass({
+				render: function() {
+					return (<p>Hello World</p>);
+				}
+			});
+
+			ReactDOM.render(
+				<HelloWorld/>,
+				document.querySelector("#container")
+			);
+		</script>
+	</body>
+</html>
